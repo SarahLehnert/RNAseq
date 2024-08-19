@@ -1,10 +1,11 @@
 ## Preparing input file 
+# Create .csv for sample input for nf-core/rnaseq (see https://github.com/nf-core/rnaseq/tree/master)
 
-#Create .csv for sample input for nf-core/rnaseq (see https://github.com/nf-core/rnaseq/tree/master)
-
-#Within RNAseq data directory: Get list of sequence file names for R1 fastq and R2 fastq 
+Within RNAseq data directory: Get list of sequence file names for R1 fastq and R2 fastq 
+```bash
 ls -d *_R1.fastq.gz -1 > list1.txt  # list all files with R1
 ls -d *_R2.fastq.gz -1 > list2.txt  # list all files with R2
+''''
 
 #get list of sample ID names from sequence file names
 grep -o -P '.{0,7}_R1.fastq.gz' list1.txt | cut -c-7 | tr - _ > list3.txt
