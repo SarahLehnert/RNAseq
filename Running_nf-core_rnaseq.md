@@ -21,6 +21,8 @@ Combine these lists as columns to match sample input file (contains 4 columns: s
 ```bash
 paste --delimiters=',' list3.txt list1.txt list2.txt | awk '{print $0 ",auto"}' > sample_seq_data_AS.csv
 ```
+Now file is ready for inputting ("sample_seq_data_AS.csv") 
+
 
 ### Run pipeline
 
@@ -29,4 +31,3 @@ Run nf-core rnaseq
 sbatch nf-core_rnaseq.sh
 ```
 
-Now file is ready for inputting ("sample_seq_data_AS.csv") 
