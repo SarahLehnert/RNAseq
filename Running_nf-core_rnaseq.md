@@ -17,9 +17,14 @@ Combine these lists as columns to match sample input file (contains 4 columns: s
 paste --delimiters=',' list3.txt list1.txt list2.txt | awk '{print $0 ",auto"}' > sample_seq_data_AS.csv
 ```
 
-A header to .csv file
+Combine these lists as columns to match sample input file (contains 4 columns: sample,fastq_1,fastq_2,strandedness). For strandedness column repeat 'auto'
 ```bash
-echo -e "sample,fastq_1,fastq_2,strandedness\n$(cat sample_seq_data_AS.csv)" > sample_seq_data_AS.csv
+paste --delimiters=',' list3.txt list1.txt list2.txt | awk '{print $0 ",auto"}' > sample_seq_data_AS.csv
+```
+
+Run nf-core rnaseq
+```bash
+sbatch nf-core_rnaseq.sh
 ```
 
 Now file is ready for inputting ("sample_seq_data_AS.csv") 
