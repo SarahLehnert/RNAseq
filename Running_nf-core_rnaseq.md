@@ -1,5 +1,5 @@
-## Preparing input file 
-### Create .csv for sample input for nf-core/rnaseq (see https://github.com/nf-core/rnaseq/tree/master)
+### Preparing input file 
+#### Create .csv for sample input for nf-core/rnaseq (see https://github.com/nf-core/rnaseq/tree/master)
 
 Within RNAseq data directory: Get list of sequence file names for R1 fastq and R2 fastq 
 ```bash
@@ -21,6 +21,8 @@ Combine these lists as columns to match sample input file (contains 4 columns: s
 ```bash
 paste --delimiters=',' list3.txt list1.txt list2.txt | awk '{print $0 ",auto"}' > sample_seq_data_AS.csv
 ```
+
+### Run pipeline
 
 Run nf-core rnaseq
 ```bash
