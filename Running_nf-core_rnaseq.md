@@ -22,6 +22,14 @@ Add header to file
 echo -e "sample,fastq_1,fastq_2,strandedness\n$(cat sample_seq_data_AS.csv)" > sample_seq_data_AS.csv
 ```
 
+### Download Atlantic salmon genome files for pipeline
+Access fasta and gtf files from salmon genome on NCBI
+```bash
+wget -L ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/237/065/GCF_905237065.1_Ssal_v3.1/GCF_905237065.1_Ssal_v3.1_genomic.fna.gz
+wget -L ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/905/237/065/GCF_905237065.1_Ssal_v3.1/GCF_905237065.1_Ssal_v3.1_genomic.gtf.gz
+```
+
+
 ### Run pipeline
 
 Run nf-core rnaseq
