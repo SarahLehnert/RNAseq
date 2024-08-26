@@ -1,5 +1,6 @@
-After running nf-core/rnaseq - look through results
+### Reviewing Results from nf-core/rnaseq 
 
+Within results directory (nfcore/multiqc/star_salmon/) save the multiqc_report.html to Desktop to view results
 ```bash
-gfdf
+scp username@address:/filepath/nfcore/multiqc/star_salmon/multiqc_report.html /Users/localdirectory/
 ```
