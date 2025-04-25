@@ -36,4 +36,9 @@ Run nf-core rnaseq
 ```bash
 sbatch nf-core_rnaseq.sh
 ```
+### Use output from nf-core rnaseq pipeline to run next step for differential abundance
 
+Run nf-core rnaseq
+```bash
+sbatch nf-core_differentialabundance.sh
+```
